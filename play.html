@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Player</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="play">
+  <div class="wrap smallWrap">
+    <h1>Join Game</h1>
+
+    <div class="card">
+      <div class="label">Your Name</div>
+      <input id="name" class="input" placeholder="Write your name..." />
+      <button id="btnJoin">Join</button>
+      <div id="status" class="muted small" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card">
+      <div class="label">TIMER</div>
+      <div id="timer" class="timer">—</div>
+    </div>
+
+    <div class="card">
+      <div class="label">CHOICES</div>
+      <div id="choices" class="choices"></div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/play.js"></script>
+</body>
+</html>

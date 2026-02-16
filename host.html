@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Host</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="host">
+  <div class="wrap">
+    <h1>Host Panel</h1>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">ROOM PIN</div>
+          <div id="pin" class="pin">—</div>
+          <div class="muted small">Players join at: /play.html</div>
+        </div>
+
+        <div class="controls">
+          <button id="btnCreate">Create Room</button>
+          <button id="btnStart" disabled>Start</button>
+        </div>
+
+        <div class="rightBox">
+          <div class="label">TIMER</div>
+          <div id="timer" class="timer">—</div>
+          <div id="answered" class="muted small">0/0 answered</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="label">QUESTION</div>
+        <div id="qMeta" class="muted small">—</div>
+        <img id="qImg" class="im" alt="question image" src="/images/q.jpeg" />
+        <div id="qPrompt" class="prompt">—</div>
+      </div>
+
+      <div class="card">
+        <div class="label">RESULTS (THIS QUESTION)</div>
+        <div id="results" class="list"></div>
+      </div>
+
+      <div class="card">
+        <div class="label">LEADERBOARD</div>
+        <div id="leaderboard" class="list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/host.js"></script>
+</body>
+</html>
